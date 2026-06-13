@@ -18,6 +18,6 @@ document.addEventListener("keypress" , function(){
 
 function levelUp(){
     level++;
-   
+   h2.innerText = `Level ${level}`;
 }
 
