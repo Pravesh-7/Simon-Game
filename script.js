@@ -7,18 +7,28 @@ let level = 0;
 let h2 = document.querySelector("h2");
 
 document.addEventListener("keypress" , function(){
-    if(started ==false){
-      console.log("Game started");
-      started  =true;
+  if(started ==false){
+    console.log("Game started");
+    started  =true;
 
-      leveUp();
-    }
+    leveUp();
+  }
     
 });
+
+function btnFlash(btn){
+  btn.classList.add("flash");
+  setTimeout(function(){
+    btn.classList.remove("flash");
+  },1000);
+}
 
 
 
 function levelUp(){
-    level++;
-   h2.innerText = `Level ${level}`;
+  level++;
+  h2.innerText = `Level ${level}`;
+  
+  //random button choose
+  btnFlash();
 }
